@@ -65,6 +65,21 @@ $(document).ready(function Schedule() {
             alert("Error Code 1000XX")
         }
     })
+
+    $("#stE").click(function()
+    {
+        if($("#newEvent").val()!=0)
+        {
+            topic.push($("#newEvent").val());
+            $("#courseTable").empty();
+            $("#courseTable").append("<tr><th>場次</th><th>時間</th><th>電影</th></tr>");
+            workday();
+        }
+        else
+        {
+            alert("Invalid input");
+        }
+    })
      //alert(typeof(topic));
     
 
